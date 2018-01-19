@@ -18,12 +18,8 @@ const style = StyleSheet.create({
     fontSize: 20,
     color: '#333',
     fontWeight: 'bold',
-    shadowColor: '#DA6C6C',
-    shadowRadius: 5,
-    shadowOffset: { x: 0, y: 2 },
-    shadowOpacity: 100,
   },
-} );
+});
 
 export default AppBar;
 

@@ -5,7 +5,7 @@ import Post from './Post';
 const Posts = ({ posts }) => (
   <ScrollView style={style.postContainer}>
     {posts.map(post =>
-      <Post key={post.id} post={post} /> )}
+      <Post key={post.id} post={post} />)}
   </ScrollView>
 );
 
