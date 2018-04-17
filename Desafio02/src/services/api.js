@@ -2,7 +2,7 @@ import { create } from 'apisauce';
 
 const api = create({
   baseURL: 'https://api.github.com',
-  headers: {
+  header: {
     Accept: 'application/vnd.github.v3+json',
     'User-Agent': 'Githuber',
   },

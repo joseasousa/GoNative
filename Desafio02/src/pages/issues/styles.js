@@ -1,4 +1,3 @@
-
 import { StyleSheet } from 'react-native';
 import { colors } from 'styles';
 
@@ -7,17 +6,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.background,
   },
-
-  contentContainer: {
-    flex: 1,
-    padding: 20,
+  tabs: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-  },
-
-  loading: {
-    marginTop: 20,
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    backgroundColor: colors.butttonGroup,
+    margin: 5,
+    padding: 15,
+    borderRadius: 5,
   },
 });
 

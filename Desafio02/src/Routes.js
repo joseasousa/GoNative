@@ -1,38 +1,16 @@
-import React from 'react';
-import { TabNavigator, StackNavigator } from 'react-navigation';
-import { colors } from 'styles';
+import { StackNavigator } from 'react-navigation';
 
-import Welcome from 'pages/Welcome';
-import Repositories from 'pages/Repositories';
-import Organizations from 'pages/Organizations';
+import Repositories from './pages/repositories';
+import Issues from './pages/issues';
 
-import Header from 'components/Header';
+const Routes = StackNavigator(
+  {
+    Repositories: { screen: Repositories },
+    Issues: { screen: Issues },
+  },
+  {
+    initialRouteName: 'Repositories',
+  },
+);
 
-const createRootNavigator = (userExists = false) =>
-  StackNavigator({
-    Welcome: { screen: Welcome },
-    User: {
-      screen: TabNavigator({
-        Repositories: { screen: Repositories },
-        Organizations: { screen: Organizations },
-      }, {
-        swipeEnabled: true,
-        animationEnabled: true,
-        tabBarPosition: 'bottom',
-        tabBarOptions: {
-          activeTintColor: colors.white,
-          inactiveTintColor: colors.inactive,
-          style: {
-            backgroundColor: colors.primary,
-          },
-        },
-      }),
-    },
-  }, {
-    initialRouteName: userExists ? 'User' : 'Welcome',
-    navigationOptions: {
-      header: props => <Header {...props} />,
-    },
-  });
-
-export default createRootNavigator;
+export default Routes;

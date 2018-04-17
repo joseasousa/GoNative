@@ -1,12 +1,22 @@
-import Reactotron from 'reactotron-react-native';
+import Reactotron, {
+  trackGlobalErrors,
+  openInEditor,
+  overlay,
+  asyncStorage,
+  networking,
+} from 'reactotron-react-native';
 
 if (__DEV__) {
   const tron = Reactotron
     .configure({
-      name: 'GitHub',
+      name: 'Desafio01 Posts',
     })
-    .useReactNative()
+    .use(trackGlobalErrors())
+    .use(openInEditor())
+    .use(overlay())
+    .use(asyncStorage())
+    .use(networking())
     .connect();
 
-  console.tron = tron;
+  global.tron = tron;
 }

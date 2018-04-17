@@ -6,9 +6,25 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.background,
   },
-
-  loading: {
-    marginTop: 20,
+  error: {
+    backgroundColor: colors.error,
+    borderRadius: 2,
+    padding: 20,
+    margin: 5,
+  },
+  errorText: {
+    color: colors.white,
+    fontWeight: 'bold',
+  },
+  info: {
+    backgroundColor: colors.info,
+    borderRadius: 2,
+    padding: 20,
+    margin: 5,
+  },
+  infoText: {
+    color: colors.black,
+    fontWeight: 'bold',
   },
 });
 
